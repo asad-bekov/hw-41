@@ -1,0 +1,39 @@
+global:
+  environment: production
+
+frontend:
+  enabled: true
+  image:
+    repository: nginx
+    tag: "1.25"
+    pullPolicy: IfNotPresent
+  replicaCount: 2
+  service:
+    type: ClusterIP
+    port: 80
+
+backend:
+  enabled: true  
+  image:
+    repository: redis
+    tag: "7.2"
+    pullPolicy: IfNotPresent
+  replicaCount: 1
+  service:
+    type: ClusterIP
+    port: 6379
+
+database:
+  enabled: true
+  statefulset: true
+  image:
+    repository: postgres
+    tag: "15"
+    pullPolicy: IfNotPresent
+  replicaCount: 1
+  service:
+    type: ClusterIP
+    port: 5432
+    
+serviceAccount:
+create: false

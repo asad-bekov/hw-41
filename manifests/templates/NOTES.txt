@@ -1,0 +1,16 @@
+1. Get the application URL by running these commands:
+{{- if .Values.frontend.enabled }}
+  Frontend Service: {{ include "myapp.fullname" . }}-frontend
+{{- end }}
+{{- if .Values.backend.enabled }}
+  Backend Service: {{ include "myapp.fullname" . }}-backend  
+{{- end }}
+{{- if .Values.database.enabled }}
+  Database Service: {{ include "myapp.fullname" . }}-database
+{{- end }}
+
+2. Check the pods:
+  kubectl get pods -l app.kubernetes.io/name={{ include "myapp.name" . }}
+
+3. Check the services:
+  kubectl get services -l app.kubernetes.io/name={{ include "myapp.name" . }}
