@@ -19,7 +19,7 @@
 helm create myapp
 ```
 
-**Скриншот 1 — структура созданного чарта:**
+**Структура созданного чарта:**
 ![helm create myapp](https://github.com/asad-bekov/hw-41/blob/main/img/1.PNG)
 
 ---
@@ -32,8 +32,8 @@ helm create myapp
 - `backend-deployment.yaml` + `backend-service.yaml`
 - `database-statefulset.yaml` + `database-service.yaml`
 
-**Скриншот 2 — структура `templates/` после модификации:**
-![tree myapp](https://github.com/asad-bekov/hw-41/blob/main/img/2.PNG
+**Структура `templates/` после модификации:**
+![tree myapp](https://github.com/asad-bekov/hw-41/blob/main/img/2.PNG)
 
 ---
 
@@ -45,7 +45,7 @@ helm create myapp
 helm lint myapp
 ```
 
-**Скриншот 3 — результат `helm lint`:**
+**Результат `helm lint`:**
 ![helm lint](https://github.com/asad-bekov/hw-41/blob/main/img/3.PNG)
 
 ---
@@ -128,7 +128,7 @@ helm install app2-v1 myapp -n app2 \
 
 ---
 
-## Структура чарта (пример)
+## Структура чарта
 
 ```
 myapp/
@@ -218,7 +218,7 @@ create: false
 
 ## Команды очистки (*при необходимости*)
 
-# Удалить релиз
+**Удалить релиз**
 
 ```bash
 helm uninstall app1-v1 -n app1
@@ -226,7 +226,7 @@ helm uninstall app1-v2 -n app1
 helm uninstall app2-v1 -n app2
 ```
 
-# Удалить namespace 
+**Удалить namespace** 
 
 ```bash
 kubectl delete namespace app1
