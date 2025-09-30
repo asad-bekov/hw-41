@@ -99,7 +99,7 @@ helm install app2-v1 myapp -n app2 \
 ---
 
 ## Демонстрация результатов и проверка
-#
+
 **Список всех релизов Helm (по всем namespace)**
 ![helm list -A](https://github.com/asad-bekov/hw-41/blob/main/img/7.PNG)
 
