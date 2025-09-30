@@ -8,7 +8,7 @@
 ## Задание 1. Подготовить Helm-чарт для приложения
 
 1. Необходимо упаковать приложение в чарт для деплоя в разные окружения.
-2. Каждый компонент приложения деплоится отдельным `deployment`ом или `statefulset` ом.
+2. Каждый компонент приложения деплоится отдельным `deployment`ом или `statefulset`ом.
 3. В переменных чарта измените образ приложения для изменения версии.
 
 
@@ -39,13 +39,8 @@ helm create myapp
 
 ## Проверка чарта
 
-Проверяем валидность чарта с помощью `lint` а Helm:
+Проверяем валидность чарта с помощью `lint`:
 
-```bash
-helm lint myapp
-```
-
-**Результат `helm lint`:**
 ![helm lint](https://github.com/asad-bekov/hw-41/blob/main/img/3.PNG)
 
 ---
@@ -62,8 +57,6 @@ helm lint myapp
 kubectl create namespace app1
 kubectl create namespace app2
 ```
-
-**Скриншот 4 — создание неймспейсов:**
 ![namespaces](https://github.com/asad-bekov/hw-41/blob/main/img/5.PNG)
 
 ### 2) Установка релизов (примеры)
@@ -79,7 +72,6 @@ helm install app1-v1 myapp -n app1 \
   --set database.image.tag="15"
 ```
 
-**Скриншот 5.1 — установка `app1-v1`:**
 ![`app1-v1`](https://github.com/asad-bekov/hw-41/blob/main/img/6.1.PNG)
 
 **Версия 2 в `app1`:**
@@ -91,7 +83,6 @@ helm install app1-v2 myapp -n app1 \
   --set database.image.tag="14"
 ```
 
-**Скриншот 5.2 — установка `app1-v2`:**
 ![`app1-v2`](https://github.com/asad-bekov/hw-41/blob/main/img/6.2.PNG)
 
 **Версия 1 в `app2`:**
@@ -103,13 +94,12 @@ helm install app2-v1 myapp -n app2 \
   --set database.image.tag="13"
 ```
 
-**Скриншот 5.3 — установка `app2-v1`:**
 ![`app2-v1`](https://github.com/asad-bekov/hw-41/blob/main/img/6.3.PNG)
 
 ---
 
 ## Демонстрация результатов и проверка
-
+#
 **Список всех релизов Helm (по всем namespace)**
 ![helm list -A](https://github.com/asad-bekov/hw-41/blob/main/img/7.PNG)
 
@@ -160,7 +150,7 @@ myapp/
 
 ---
 
-**`values.yaml`**
+**Манифест `values.yaml`**
 
 <details>
 <summary>Показать</summary> 
