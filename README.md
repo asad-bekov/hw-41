@@ -121,18 +121,20 @@ helm install app2-v1 myapp -n app2 \
 ## Структура чарта
 
 ```
-myapp/
+myapp
+├── charts
 ├── Chart.yaml
-├── values.yaml
-└── templates/
-    ├── frontend-deployment.yaml
-    ├── frontend-service.yaml
-    ├── backend-deployment.yaml
-    ├── backend-service.yaml
-    ├── database-statefulset.yaml
-    ├── database-service.yaml
-    ├── NOTES.txt
-    └── _helpers.tpl
+├── templates
+│   ├── backend-deployment.yaml
+│   ├── backend-service.yaml
+│   ├── database-service.yaml
+│   ├── database-statefulset.yaml
+│   ├── frontend-deployment.yaml
+│   ├── frontend-service.yaml
+│   ├── _helpers.tpl
+│   ├── NOTES.txt
+│   └── tests
+└── values.yaml
 ```
 
 ---
